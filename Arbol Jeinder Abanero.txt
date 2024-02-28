@@ -1,0 +1,165 @@
+
+CREATE (:Mujer {nombre: "Dinis Abanero", edad: 45, actividad: "Otros", `gusto1`: "Leer", `gusto2`: "Peliculas", disgusto: "Motos"})
+CREATE (:Mujer {nombre: "Eva Abanero", edad: 70, actividad: "Otros", `gusto1`: "Peliculas", `gusto2`: "Leer", disgusto: "Gatos", defuncion: date('2018-12-03')})
+CREATE (:Hombre {nombre: "Jose Abanero", edad: 53, actividad: "Otros", `gusto1`: "Futbol", `gusto2`: "Perros", disgusto: "Motos"})
+CREATE (:Hombre {nombre: "Jeinder Abanero", edad: 20, actividad: "Estudiante", `gusto1`: "Tecnologias", `gusto2`: "Perros", disgusto: "Gatos"})
+CREATE (:Mujer {nombre: "Yennis Salazar", edad: 51, actividad: "Otros", `gusto1`: "Leer", `gusto2`: "Moda", disgusto: "Gatos"})
+CREATE (:Hombre {nombre: "Israel Salazar", edad: 71, actividad: "Otros", `gusto1`: "Beisbol", `gusto2`: "Viajar", disgusto: "Motos"})
+CREATE (:Mujer {nombre: "Dominga Maracay", edad: 70, actividad: "Otros", `gusto1`: "Naturaleza", `gusto2`: "Perros", disgusto: "Gatos"})
+CREATE (:Mujer {nombre: "Dominga Salazar", edad: 42, actividad: "Otros", `gusto1`: "Leer", `gusto2`: "Naturaleza", disgusto: "Gatos"})
+CREATE (:Mujer {nombre: "Elia Gamez", edad: 50, actividad: "Otros", `gusto1`: "Perros", `gusto2`: "Moda", disgusto: "Motos"})
+CREATE (:Hombre {nombre: "Jose Gamez", edad: 86, actividad: "Otros", `gusto1`: "Autos", `gusto2`: "Viajar", disgusto: "Motos", defuncion: date('2014-01-18')})
+CREATE (:Hombre {nombre: "Victor Abanero", edad: 27, actividad: "Estudiante", `gusto1`: "Futbol", `gusto2`: "Tecnologias", disgusto: "Motos"})
+CREATE (:Hombre {nombre: "Joan Abanero", edad: 30, actividad: "Otros", `gusto1`: "Futbol", `gusto2`: "Viajar", disgusto: "Gatos"})
+CREATE (:Hombre {nombre: "Elier Abanero", edad: 2, actividad: "Otros", `gusto1`: "Futbol", `gusto2`: "Perros", disgusto: "Gatos"})
+CREATE (:Mujer {nombre: "Gabriela Gonzalez", edad: 25, actividad: "Otros", `gusto1`: "Tecnologias", `gusto2`: "Leer", disgusto: "Volibol"})
+CREATE (:Hombre {nombre: "Luis Salazar", edad: 53, actividad: "Otros", `gusto1`: "Autos", `gusto2`: "Viajar", disgusto: "Gatos"})
+CREATE (:Hombre {nombre: "Cipriano Salazar", edad: 45, actividad: "Otros", `gusto1`: "Leer", `gusto2`: "Viajar", disgusto: "Volibol"})
+CREATE (:Hombre {nombre: "Marcos Gamez", edad: 56, actividad: "Otros", `gusto1`: "Peliculas", `gusto2`: "Perros", disgusto: "Beisbol"})
+CREATE (:Mujer {nombre: "Migdalys Salazar", edad: 55, actividad: "Otros", `gusto1`: "Leer", `gusto2`: "Naturaleza", disgusto: "Volibol"})
+CREATE (:Mujer {nombre: "Fatima Gamez", edad: 52, actividad: "Otros", `gusto1`: "Peliculas", `gusto2`: "Viajar", disgusto: "Volibol"})
+CREATE (:Mujer {nombre: "Maria Marchan", edad: 20, actividad: "Estudiante", `gusto1`: "Peliculas", `gusto2`: "Moda", disgusto: "Motos"})
+CREATE (:Hombre {nombre: "Hector Marchan", edad: 64, actividad: "Militar", `gusto1`: "Futbol", `gusto2`: "Leer", disgusto: "Gatos"})
+CREATE (:Mujer {nombre: "Gabriela Marchan", edad: 30, actividad: "Otros", `gusto1`: "Beisbol", `gusto2`: "Peliculas", disgusto: "Volibol"})
+CREATE (:Hombre {nombre: "Yordan Marchan", edad: 35, actividad: "Militar", `gusto1`: "Futbol", `gusto2`: "Peliculas", disgusto: "Beisbol"})
+CREATE (:Hombre {nombre: "Rene Marchan", edad: 27, actividad: "Militar", `gusto1`: "Beisbol", `gusto2`: "Tecnologias", disgusto: "Motos"})
+CREATE (:Hombre {nombre: "Dibrin Abanero", edad: 59, actividad: "Militar", `gusto1`: "Leer", `gusto2`: "Tecnologias", disgusto: "Motos"})
+
+
+
+MATCH (Jose: Hombre {nombre: "Jose Abanero"}), (Jeinder: Hombre {nombre: "Jeinder Abanero"})
+CREATE (Jose)-[:PADRE_DE {fecha_ini: date('2003-08-15')}]->(Jeinder)
+
+MATCH (Jeinder: Hombre {nombre: "Jeinder Abanero"}), (Yennis: Mujer {nombre: "Yennis Salazar"})
+CREATE (Jeinder)<-[:PADRE_DE {fecha_ini: date('2003-08-15')}]-(Yennis)
+
+
+MATCH (Yennis: Mujer {nombre: "Yennis Salazar"}), (Victor: Hombre {nombre: "Victor Abanero"})
+CREATE (Yennis)-[:PADRE_DE {fecha_ini: date('1996-08-23')}]->(Victor)
+
+MATCH (Jose: Hombre {nombre: "Jose Abanero"}), (Victor: Hombre {nombre: "Victor Abanero"})
+CREATE (Jose)-[:PADRE_DE {fecha_ini: date('1996-08-23')}]->(Victor)
+
+MATCH (Yennis: Mujer {nombre: "Yennis Salazar"}), (Joan: Hombre {nombre: "Joan Abanero"})
+CREATE (Yennis)-[:PADRE_DE {fecha_ini: date('1994-11-23')}]->(Joan)
+
+MATCH (Jose: Hombre {nombre: "Jose Abanero"}), (Joan: Hombre {nombre: "Joan Abanero"})
+CREATE (Jose)-[:PADRE_DE {fecha_ini: date('1994-11-23')}]->(Joan)
+
+
+MATCH (Joan: Hombre {nombre: "Joan Abanero"}), (Elier: Hombre {nombre: "Elier Abanero"})
+CREATE (Joan)-[:PADRE_DE {fecha_ini: date('2021-08-27')}]->(Elier)
+
+MATCH (Gabriela: Mujer {nombre: "Gabriela Gonzalez"}), (Elier: Hombre {nombre: "Elier Abanero"})
+CREATE (Gabriela)-[:PADRE_DE {fecha_ini: date('2021-08-27')}]->(Elier)
+
+
+MATCH (Yennis: Mujer {nombre: "Yennis Salazar"}), (Dominga: Mujer {nombre: "Dominga Maracay"})
+CREATE (Dominga)-[:PADRE_DE {fecha_ini: date('1972-09-13')}]->(Yennis)
+
+MATCH (Yennis: Mujer {nombre: "Yennis Salazar"}), (Israel: Hombre {nombre: "Israel Salazar"})
+CREATE (Yennis)<-[:PADRE_DE {fecha_ini: date('1972-09-13')}]-(Israel)
+
+
+MATCH (Dominga: Mujer {nombre: "Dominga Maracay"}), (Dominga_1: Mujer {nombre: "Dominga Salazar"})
+CREATE (Dominga)-[:PADRE_DE {fecha_ini: date('1982-05-21')}]->(Dominga_1)
+
+MATCH (Dominga: Mujer {nombre: "Dominga Salazar"}), (Israel: Hombre {nombre: "Israel Salazar"})
+CREATE (Dominga)<-[:PADRE_DE {fecha_ini: date('1982-05-21')}]-(Israel)
+
+MATCH (Cipriano: Hombre {nombre: "Cipriano Salazar"}), (Dominga: Mujer {nombre: "Dominga Maracay"})
+CREATE (Cipriano)<-[:PADRE_DE {fecha_ini: date('1979-06-25')}]-(Dominga)
+
+MATCH (Cipriano: Hombre {nombre: "Cipriano Salazar"}), (Israel: Hombre {nombre: "Israel Salazar"})
+CREATE (Cipriano)<-[:PADRE_DE {fecha_ini: date('1979-06-25')}]-(Israel)
+
+
+
+MATCH (Luis: Hombre {nombre: "Luis Salazar"}), (Dominga: Mujer {nombre: "Dominga Maracay"})
+CREATE (Luis)<-[:PADRE_DE {fecha_ini: date('1971-06-15')}]-(Dominga)
+
+MATCH (Luis: Hombre {nombre: "Luis Salazar"}), (Israel: Hombre {nombre: "Israel Salazar"})
+CREATE (Luis)<-[:PADRE_DE {fecha_ini: date('1971-06-15')}]-(Israel)
+
+MATCH (Dominga: Mujer {nombre: "Dominga Maracay"}), (Migdalys: Mujer {nombre: "Migdalys Salazar"})
+CREATE (Migdalys)<-[:PADRE_DE {fecha_ini: date('1969-02-02')}]-(Dominga)
+
+MATCH (Israel: Hombre {nombre: "Israel Salazar"}), (Migdalys: Mujer {nombre: "Migdalys Salazar"})
+CREATE (Israel)-[:PADRE_DE {fecha_ini: date('1969-02-02')}]->(Migdalys)
+
+
+MATCH (Dinis: Mujer {nombre: "Dinis Abanero"}), (Eva: Mujer {nombre: "Eva Abanero"})
+CREATE (Dinis)<-[:PADRE_DE {fecha_ini: date('1979-07-15')}]-(Eva)
+
+MATCH (Eva: Mujer {nombre: "Eva Abanero"}), (Dibrin: Hombre {nombre: "Dibrin Abanero"})
+CREATE (Eva)-[:PADRE_DE {fecha_ini: date('1965-03-18')}]->(Dibrin)
+
+MATCH (Eva: Mujer {nombre: "Eva Abanero"}), (Jose: Hombre {nombre: "Jose Abanero"})
+CREATE (Eva)-[:PADRE_DE {fecha_ini: date('1970-11-18')}]->(Jose)
+
+
+MATCH (Jose: Hombre {nombre: "Jose Gamez"}), (Jose_1: Hombre {nombre: "Jose Abanero"})
+CREATE (Jose)-[:PADRE_DE {fecha_ini: date('1970-11-18')}]->(Jose_1)
+
+MATCH (Jose: Hombre {nombre: "Jose Gamez"}), (Fatima: Mujer {nombre: "Fatima Gamez"})
+CREATE (Jose)-[:PADRE_DE {fecha_ini: date('1972-12-28')}]->(Fatima)
+
+MATCH (Jose: Hombre {nombre: "Jose Gamez"}), (Elia: Mujer {nombre: "Elia Gamez"})
+CREATE (Jose)-[:PADRE_DE {fecha_ini: date('1972-12-28')}]->(Elia)
+
+MATCH (Jose: Hombre {nombre: "Jose Gamez"}), (Marcos: Hombre {nombre: "Marcos Gamez"})
+CREATE (Jose)-[:PADRE_DE {fecha_ini: date('1972-12-28')}]->(Marcos)
+
+
+
+MATCH (Maria: Mujer {nombre: "Maria Marchan"}), (Migdalys: Mujer {nombre: "Migdalys Salazar"})
+CREATE (Migdalys)-[:PADRE_DE {fecha_ini: date('2004-05-28')}]->(Maria)
+
+MATCH (Hector: Hombre {nombre: "Hector Marchan"}), (Maria: Mujer {nombre: "Maria Marchan"})
+CREATE (Hector)-[:PADRE_DE {fecha_ini: date('2004-05-28')}]->(Maria)
+
+
+MATCH (Gabriela: Mujer {nombre: "Gabriela Marchan"}), (Hector: Hombre {nombre: "Hector Marchan"})
+CREATE (Gabriela)<-[:PADRE_DE {fecha_ini: date('1994-01-15')}]-(Hector)
+
+MATCH (Migdalys: Mujer {nombre: "Migdalys Salazar"}), (Gabriela: Mujer {nombre: "Gabriela Marchan"})
+CREATE (Migdalys)-[:PADRE_DE {fecha_ini: date('1994-01-15')}]->(Gabriela)
+
+MATCH (Hector: Hombre {nombre: "Hector Marchan"}), (Yordan: Hombre {nombre: "Yordan Marchan"})
+CREATE (Hector)-[:PADRE_DE {fecha_ini: date('1989-02-28')}]->(Yordan)
+
+MATCH (Migdalys: Mujer {nombre: "Migdalys Salazar"}), (Yordan: Hombre {nombre: "Yordan Marchan"})
+CREATE (Migdalys)-[:PADRE_DE {fecha_ini: date('1989-02-28')}]->(Yordan)
+
+
+MATCH (Hector: Hombre {nombre: "Hector Marchan"}), (Rene: Hombre {nombre: "Rene Marchan"})
+CREATE (Hector)-[:PADRE_DE {fecha_ini: date('1997-07-28')}]->(Rene)
+
+MATCH (Migdalys: Mujer {nombre: "Migdalys Salazar"}), (Rene: Hombre {nombre: "Rene Marchan"})
+CREATE (Migdalys)-[:PADRE_DE {fecha_ini: date('1997-07-28')}]->(Rene)
+
+
+
+MATCH (Eva: Mujer {nombre: "Eva Abanero"}), (Jose: Hombre {nombre: "Jose Gamez"})
+CREATE (Eva)-[:CASADO_CON {fecha_ini: date('1970-02-07'), fecha_fin: date('2014-02-28')}]->(Jose),
+       (Jose)-[:CASADO_CON {fecha_ini: date('1970-02-07'), fecha_fin: date('2014-02-28')}]->(Eva)
+       
+MATCH (Jose: Hombre {nombre: "Jose Abanero"}), (Yennis: Mujer {nombre: "Yennis Salazar"})
+CREATE (Jose)-[:CASADO_CON {fecha_ini: date('1994-05-08')}]->(Yennis),
+       (Yennis)-[:CASADO_CON {fecha_ini: date('1994-05-08')}]->(Jose)
+
+MATCH (Dominga: Mujer {nombre: "Dominga Maracay"}), (Israel: Hombre {nombre: "Israel Salazar"})
+CREATE (Dominga)-[:CASADO_CON {fecha_ini: date('1975-05-08'), fecha_fin: date('1997-09-08')}]->(Israel),
+       (Israel)-[:CASADO_CON {fecha_ini: date('1975-05-08'), fecha_fin: date('1997-09-08')}]->(Dominga)
+
+MATCH (Hector: Hombre {nombre: "Hector Marchan"}), (Migdalys: Mujer {nombre: "Migdalys Salazar"})
+CREATE (Hector)-[:CASADO_CON {fecha_ini: date('1990-05-08'), fecha_fin: date('2010-09-08')}]->(Migdalys),
+       (Migdalys)-[:CASADO_CON {fecha_ini: date('1990-05-08'), fecha_fin: date('2010-09-08')}]->(Hector)
+
+MATCH (Gabriela: Mujer {nombre: "Gabriela Gonzalez"}), (Joan: Hombre {nombre: "Joan Abanero"})
+CREATE (Gabriela)-[:CASADO_CON {fecha_ini: date('2020-02-05')}]->(Joan),
+       (Joan)-[:CASADO_CON {fecha_ini: date('2020-02-05')}]->(Gabriela)
+
+
+
+
