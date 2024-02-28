@@ -1,0 +1,190 @@
+//Arbol EAnselmi
+
+CREATE (ivan:Hombre{nombre:"Ivan Anselmi", edad:35, actividad:"Profesor", gusto1:"Tecnologias", gusto2:"Viajar", disgusto:"Gatos"})
+
+CREATE (liris:Mujer{nombre:"Liris Sotillo", edad:30, actividad:"Medico", gusto1:"Peliculas", gusto2:"Naturaleza", disgusto:"Futbol"})
+
+CREATE (aude:Mujer{nombre:"Aude Flores", edad:40, actividad:"Profesor", gusto1:"Leer", gusto2:"Viajar", disgusto:"Moda",defuncion: date('2020-6-1')})
+
+CREATE (ernesto:Hombre{nombre:"Ernesto Sotillo", edad:25, actividad:"Ingeniero", gusto1:"Musica", gusto2:"Naturaleza", disgusto:"Beisbol",defuncion: date('2015-8-6')})
+
+CREATE (ednoweri:Mujer{nombre:"Ednoweri Anselmi", edad:50, actividad:"Estudiante", gusto1:"Animales", gusto2:"Viajar", disgusto:"Tecnologias"})
+
+CREATE (magaly: Mujer {nombre:"Magaly sotillo",edad: 28,actividad: "Ingeniero",gusto1: "Viajar",gusto2: "Musica", disgusto: "Beisbol"})
+
+CREATE (felicita: Mujer {nombre: "Felicita Alvarado",edad: 45, actividad: "Psicologa",gusto1: "Leer",gusto2: "Peliculas",disgusto: "Futbol",defuncion: date('2000-2-25')})
+
+CREATE (jesus: Hombre {nombre: "Jesus Flores",edad: 60, actividad: "Militar", gusto1: "Futbol", gusto2: "Viajar", disgusto: "Moda",defuncion: date('1995-4-2')})
+
+CREATE (isidora: Mujer {nombre: "Isidora Pagola",edad: 22,actividad: "Profesor",gusto1: "Peliculas",gusto2: "Musica",disgusto: "Tecnologias",defuncion: date('2000-8-6')})
+
+CREATE (augusto: Hombre {nombre: "Augusto Sotillo",edad: 55,actividad: "Ingeniero",gusto1: "Tecnologias",gusto2: "Autos", disgusto: "Gatos",defuncion: date('1997-6-4')})
+
+CREATE (lisset: Mujer {nombre: "Lisset Sotillo", edad: 28, actividad: "Ingeniero", gusto1: "Viajar", gusto2: "Musica",disgusto: "Beisbol"})
+
+CREATE (coromoto: Mujer {nombre: "Coromoto Sotillo",edad: 35,actividad: "Profesor",gusto1: "Peliculas",gusto2: "Naturaleza",disgusto: "Futbol"})
+
+CREATE (edwar: Hombre {nombre: "Edwar Perez",edad: 40,actividad: "Profesor",gusto1: "Leer",gusto2: "Viajar",disgusto: "Moda"})
+
+CREATE (sabala: Hombre {nombre: "Sabala pagola",edad: 25,actividad: "Ingeniero",gusto1: "Musica",gusto2: "Peliculas",disgusto: "Beisbol"})
+
+CREATE (ana: Mujer {nombre: "Ana Castillo",edad: 50,actividad: "Abogado",gusto1: "Animales",gusto2: "Naturaleza",disgusto: "Tecnologias"})
+
+CREATE (luis: Hombre { nombre: "Luis Sotillo",edad: 29,actividad: "Ingeniero",gusto1: "Viajar",gusto2: "Musica",disgusto: "Futbol"})
+
+CREATE (beatriz: Mujer {nombre: "Beatriz Rodriguez",edad: 36,actividad: "Ingeniero",gusto1: "Peliculas",gusto2: "Naturaleza",disgusto: "Tecnologias"})
+
+CREATE (isidora2: Mujer {nombre: "Isidora Sotillo",edad: 41,actividad: "Profesor",gusto1: "Leer",gusto2: "Viajar",disgusto: "Moda"})
+
+CREATE (luis2: Hombre {nombre: "Luis Salazar",edad: 26,actividad: "Estudiante",gusto1: "Musica",gusto2: "Deportes",disgusto: "Futbol"})
+
+CREATE (yuleima: Mujer {nombre: "Yuleima Sotillo",edad: 51,actividad: "Abogada",gusto1: "Animales",gusto2: "Naturaleza",disgusto: "Tecnologias"})
+
+CREATE (wilfredo: Hombre {nombre: "Wilfredo Coa",edad: 33,actividad: "Ingeniero",gusto1: "Tecnologias",gusto2: "Autos",disgusto: "Gatos"})
+
+CREATE (genesis: Mujer {nombre: "Genesis Coa",edad: 46,actividad: "Medico",gusto1: "Naturaleza",gusto2: "Leer",disgusto: "Futbol"})
+
+CREATE (leo: Hombre {nombre: "Leo Fernandez",edad: 39,actividad: "Profesor",gusto1: "Leer",gusto2: "Viajar",disgusto: "Moda"})
+
+CREATE (yeruzca: Mujer {nombre: "Yeruzca Sanchez",edad: 28,actividad: "Veterinario", gusto1: "Animales", gusto2: "Naturaleza", disgusto: "Tecnologias"})
+
+CREATE (jesus2: Hombre {nombre: "Jesus Moreno",edad: 43,actividad: "Psicologo",gusto1: "Peliculas",gusto2: "Musica", disgusto: "Futbol"})
+
+//Relaciones
+
+MATCH (liris: Mujer {nombre: "Liris Sotillo"}), (yeruzca: Mujer {nombre: "Yeruzca Sanchez"})
+CREATE (liris)-[:AMIGO_DE {fecha_ini: datetime()}]->(yeruzca)
+
+MATCH (ivan: Hombre {nombre: "Ivan Anselmi"}), (jesus2: Hombre {nombre: "Jesus Moreno"})
+CREATE (ivan)-[:AMIGO_DE{fecha_ini: datetime()}]->(jesus2)
+
+MATCH (beatriz: Mujer {nombre: "Beatriz Rodriguez"}), (lisset: Mujer {nombre: "Lisset Sotillo"})
+CREATE (beatriz)-[:AMIGO_DE {fecha_ini: datetime()}]->(lisset)
+
+MATCH (ednoweri: Mujer {nombre: "Ednoweri Anselmi"}), (genesis:Mujer {nombre: "Genesis Coa"})
+CREATE (ednoweri)-[:AMIGO_DE {fecha_ini: datetime()}]->(genesis)
+
+MATCH (genesis:Mujer {nombre: "Genesis Coa"}), (lisset: Mujer {nombre: "Lisset Sotillo"})
+CREATE (genesis)-[:AMIGO_DE {fecha_ini: datetime()}]->(lisset) 
+
+MATCH (luis2: Hombre {nombre: "Luis Salazar"}), (wilfredo: Hombre {nombre: "Wilfredo Coa"})
+CREATE (luis2)-[:AMIGO_DE {fecha_ini: datetime()}]->(wilfredo)
+
+MATCH (wilfredo: Hombre {nombre: "Wilfredo Coa"}), (leo: Hombre {nombre: "Leo Fernandez"})
+CREATE (wilfredo)-[:AMIGO_DE {fecha_ini: datetime()}]->(leo)
+
+MATCH (ana: Mujer {nombre: "Ana Castillo"}), (coromoto: Mujer {nombre: "Coromoto Sotillo"})
+CREATE (ana)-[:AMIGO_DE {fecha_ini: datetime()}]->(coromoto) 
+
+MATCH (jesus2: Hombre {nombre: "Jesus Moreno"}), (magaly: Mujer {nombre:"Magaly sotillo"})
+CREATE (jesus2)-[:AMIGO_DE {fecha_ini: datetime()}]->(magaly)
+
+MATCH (sabala: Hombre {nombre: "Sabala pagola"}), (liris:Mujer{nombre:"Liris Sotillo"})
+CREATE (sabala)-[:AMIGO_DE {fecha_ini: datetime()}]->(liris) 
+
+MATCH (ernesto:Hombre{nombre:"Ernesto Sotillo"}), (augusto: Hombre {nombre: "Augusto Sotillo"})
+CREATE (ernesto)-[:AMIGO_DE {fecha_ini: datetime()}]->(augusto)
+
+MATCH (yuleima: Mujer {nombre: "Yuleima Sotillo"}), (yeruzca: Mujer {nombre: "Yeruzca Sanchez"})
+CREATE (javier)-[:AMIGO_DE {fecha_ini: datetime()}]->(yeruzca)
+
+MATCH (felicita: Mujer {nombre: "Felicita Alvarado"}), (isidora: Mujer {nombre: "Isidora Pagola"})
+CREATE (felicita)-[:AMIGO_DE {fecha_ini: datetime()}]->(isidora)
+
+MATCH (edwar: Hombre {nombre: "Edwar Perez"}), (leo: Hombre {nombre: "Leo Fernandez"})
+CREATE (edwar)-[:AMIGO_DE {fecha_ini: datetime()}]->(leo) 
+
+
+// Relaciones "Padre_de" con atributo "fecha_ini"
+
+MATCH (ivan:Hombre{nombre:"Ivan Anselmi"}), (ednoweri:Mujer{nombre:"Ednoweri Anselmi"})
+CREATE (ivan)-[:PADRE_DE {fecha_ini: datetime()}]->(ednoweri)
+
+MATCH (liris:Mujer{nombre:"Liris Sotillo"}), (ednoweri:Mujer{nombre:"Ednoweri Anselmi"})
+CREATE (liris)-[:PADRE_DE {fecha_ini: datetime()}]->(ednoweri) 
+
+MATCH (aude:Mujer{nombre:"Aude Flores"}), (liris:Mujer{nombre:"Liris Sotillo"})
+CREATE (aude)-[:PADRE_DE {fecha_ini: datetime()}]->(liris) 
+
+MATCH (ernesto:Hombre{nombre:"Ernesto Sotillo"}), (liris:Mujer{nombre:"Liris Sotillo"})
+CREATE (ernesto)-[:PADRE_DE {fecha_ini: datetime()}]->(liris)
+
+MATCH (felicita: Mujer {nombre: "Felicita Alvarado"}), (aude:Mujer{nombre:"Aude Flores"})
+CREATE (felicita)-[:PADRE_DE {fecha_ini: datetime()}]->(aude)
+
+MATCH (jesus: Hombre {nombre: "Jesus Flores"}), (aude:Mujer{nombre:"Aude Flores"})
+CREATE (jesus)-[:PADRE_DE {fecha_ini: datetime()}]->(aude) 
+
+MATCH (aude:Mujer{nombre:"Aude Flores"}), (lisset: Mujer {nombre: "Lisset Sotillo"})
+CREATE (aude)-[:PADRE_DE {fecha_ini: datetime()}]->(lisset)
+
+MATCH (aude:Mujer{nombre:"Aude Flores"}), (coromoto: Mujer {nombre: "Coromoto Sotillo"})
+CREATE (aude)-[:PADRE_DE {fecha_ini: datetime()}]->(coromoto)
+
+MATCH (aude:Mujer{nombre:"Aude Flores"}), (yuleima: Mujer {nombre: "Yuleima Sotillo"})
+CREATE (aude)-[:PADRE_DE {fecha_ini: datetime()}]->(yuleima)
+
+MATCH (yuleima: Mujer {nombre: "Yuleima Sotillo"}), (genesis: Mujer {nombre: "Genesis Coa"})
+CREATE (yuleima)-[:PADRE_DE {fecha_ini: datetime()}]->(genesis)
+
+MATCH (coromoto: Mujer {nombre: "Coromoto Sotillo"}), (jesus2: Hombre {nombre: "Jesus Moreno"})
+CREATE (yuleima)-[:PADRE_DE {fecha_ini: datetime()}]->(genesis) <<<
+
+MATCH (ernesto:Hombre{nombre:"Ernesto Sotillo"}), (lisset: Mujer {nombre: "Lisset Sotillo"})
+CREATE (aude)-[:PADRE_DE {fecha_ini: datetime()}]->(lisset)
+
+MATCH (ernesto:Hombre{nombre:"Ernesto Sotillo"}), (coromoto: Mujer {nombre: "Coromoto Sotillo"})
+CREATE (aude)-[:PADRE_DE {fecha_ini: datetime()}]->(coromoto)
+
+MATCH (ernesto:Hombre{nombre:"Ernesto Sotillo"}), (yuleima: Mujer {nombre: "Yuleima Sotillo"})
+CREATE (aude)-[:PADRE_DE {fecha_ini: datetime()}]->(yuleima)
+
+MATCH (wilfredo: Hombre {nombre: "Wilfredo Coa"}), (genesis: Mujer {nombre: "Genesis Coa"})
+CREATE (wilfredo)-[:PADRE_DE {fecha_ini: datetime()}]->(genesis)
+
+
+// Relaciones "Casado_con/conviviente" con atributos "fecha_ini" y "fecha_fin"
+
+MATCH (ivan:Hombre{nombre:"Ivan Anselmi"}), (liris:Mujer{nombre:"Liris Sotillo"})
+CREATE (ivan)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(liris),
+       (liris)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(ivan)
+
+MATCH (aude:Mujer{nombre:"Aude Flores"}), (ernesto:Hombre{nombre:"Ernesto Sotillo"})
+CREATE (aude)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(ernesto),
+       (ernesto)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(aude)
+
+MATCH (felicita: Mujer {nombre: "Felicita Alvarado"}), (jesus: Hombre {nombre: "Jesus Flores"})
+CREATE (felicita)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(jesus),
+       (jesus)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(felicita) 
+
+MATCH (isidora: Mujer {nombre: "Isidora Pagola"}), (augusto: Hombre {nombre: "Augusto Sotillo"})
+CREATE (isidora)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(augusto),
+       (augusto)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(isidora) 
+
+MATCH (lisset: Mujer {nombre: "Lisset Sotillo"}), (edwar: Hombre {nombre: "Edwar Perez"})
+CREATE (lisset)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(edwar),
+       (edwar)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(lisset)
+
+MATCH (sabala: Hombre {nombre: "Sabala pagola"}), (ana: Mujer {nombre: "Ana Castillo"})
+CREATE (Ana)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(Ana),
+       (laura)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(sabala)  <<<<<
+
+MATCH (luis: Hombre { nombre: "Luis Sotillo"}), (isidora2: Mujer {nombre: "Isidora Sotillo"})
+CREATE (luis)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(isidora2),
+       (isidora2)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(luis)
+
+MATCH (yuleima: Mujer {nombre: "Yuleima Sotillo"}), (wilfredo: Hombre {nombre: "Wilfredo Coa"})
+CREATE (yuleima)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(wilfredo),
+       (wilfredo)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(yuleima)
+
+MATCH (genesis: Mujer {nombre: "Genesis Coa"}), (leo: Hombre {nombre: "Leo Fernandez"})
+CREATE (genesis)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(leo),
+       (leo)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(genesis)
+
+
+MATCH (yeruzca: Mujer {nombre: "Yeruzca Sanchez"}), (jesus2: Hombre {nombre: "Jesus Moreno"})
+CREATE (yeruzca)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(jesus2),
+       (jesus2)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(yeruzca)
+
+
+
