@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta Neo4j</title>
+</head>
+<body>
+    <h1>Nodos Hombres:</h1>
+    <ul>
+        {% for hombre in hombres %}
+        <li>{{ hombre }}</li>
+        {% endfor %}
+    </ul>
+
+    <h1>Nodos Mujeres:</h1>
+    <ul>
+        {% for mujer in mujeres %}
+        <li>{{ mujer }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
