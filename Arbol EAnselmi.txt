@@ -1,59 +1,59 @@
 //Arbol EAnselmi
 
-CREATE (ivan:Hombre{nombre:"Ivan Anselmi", edad:35, actividad:"Profesor", gusto1:"Tecnologias", gusto2:"Viajar", disgusto:"Gatos"})
+CREATE (ivan:Hombre{nombre:"Ivan Anselmi", edad:63, actividad:"Profesor", gusto1:"Tecnologias", gusto2:"Viajar", disgusto:"Gatos"})
 
-CREATE (liris:Mujer{nombre:"Liris Sotillo", edad:30, actividad:"Medico", gusto1:"Peliculas", gusto2:"Naturaleza", disgusto:"Futbol"})
+CREATE (liris:Mujer{nombre:"Liris Sotillo", edad:62, actividad:"Medico", gusto1:"Peliculas", gusto2:"Naturaleza", disgusto:"Futbol"})
 
-CREATE (aude:Mujer{nombre:"Aude Flores", edad:40, actividad:"Profesor", gusto1:"Leer", gusto2:"Viajar", disgusto:"Moda",defuncion: date('2020-6-1')})
+CREATE (aude:Mujer{nombre:"Aude Flores", edad:78, actividad:"Profesor", gusto1:"Leer", gusto2:"Viajar", disgusto:"Moda",defuncion: date('2020-6-1')})
 
-CREATE (ernesto:Hombre{nombre:"Ernesto Sotillo", edad:25, actividad:"Ingeniero", gusto1:"Musica", gusto2:"Naturaleza", disgusto:"Beisbol",defuncion: date('2015-8-6')})
+CREATE (ernesto:Hombre{nombre:"Ernesto Sotillo", edad:80, actividad:"Ingeniero", gusto1:"Musica", gusto2:"Naturaleza", disgusto:"Beisbol",defuncion: date('2015-8-6')})
 
-CREATE (ednoweri:Mujer{nombre:"Ednoweri Anselmi", edad:50, actividad:"Estudiante", gusto1:"Animales", gusto2:"Viajar", disgusto:"Tecnologias"})
+CREATE (ednoweri:Mujer{nombre:"Ednoweri Anselmi", edad:26, actividad:"Estudiante", gusto1:"Animales", gusto2:"Viajar", disgusto:"Tecnologias"})
 
-CREATE (magaly: Mujer {nombre:"Magaly sotillo",edad: 28,actividad: "Ingeniero",gusto1: "Viajar",gusto2: "Musica", disgusto: "Beisbol"})
+CREATE (magaly: Mujer {nombre:"Magaly sotillo",edad: 40,actividad: "Ingeniero",gusto1: "Viajar",gusto2: "Musica", disgusto: "Beisbol"})
 
-CREATE (felicita: Mujer {nombre: "Felicita Alvarado",edad: 45, actividad: "Psicologa",gusto1: "Leer",gusto2: "Peliculas",disgusto: "Futbol",defuncion: date('2000-2-25')})
+CREATE (felicita: Mujer {nombre: "Felicita Alvarado",edad: 79, actividad: "Psicologa",gusto1: "Leer",gusto2: "Peliculas",disgusto: "Futbol",defuncion: date('2000-2-25')})
 
-CREATE (jesus: Hombre {nombre: "Jesus Flores",edad: 60, actividad: "Militar", gusto1: "Futbol", gusto2: "Viajar", disgusto: "Moda",defuncion: date('1995-4-2')})
+CREATE (jesus: Hombre {nombre: "Jesus Flores",edad: 72, actividad: "Militar", gusto1: "Futbol", gusto2: "Viajar", disgusto: "Moda",defuncion: date('1995-4-2')})
 
-CREATE (isidora: Mujer {nombre: "Isidora Pagola",edad: 22,actividad: "Profesor",gusto1: "Peliculas",gusto2: "Musica",disgusto: "Tecnologias",defuncion: date('2000-8-6')})
+CREATE (isidora: Mujer {nombre: "Isidora Pagola",edad: 89,actividad: "Profesor",gusto1: "Peliculas",gusto2: "Musica",disgusto: "Tecnologias",defuncion: date('2000-8-6')})
 
-CREATE (augusto: Hombre {nombre: "Augusto Sotillo",edad: 55,actividad: "Ingeniero",gusto1: "Tecnologias",gusto2: "Autos", disgusto: "Gatos",defuncion: date('1997-6-4')})
+CREATE (augusto: Hombre {nombre: "Augusto Sotillo",edad: 88,actividad: "Ingeniero",gusto1: "Tecnologias",gusto2: "Autos", disgusto: "Gatos",defuncion: date('1997-6-4')})
 
-CREATE (lisset: Mujer {nombre: "Lisset Sotillo", edad: 28, actividad: "Ingeniero", gusto1: "Viajar", gusto2: "Musica",disgusto: "Beisbol"})
+CREATE (lisset: Mujer {nombre: "Lisset Sotillo", edad: 45, actividad: "Ingeniero", gusto1: "Viajar", gusto2: "Musica",disgusto: "Beisbol"})
 
-CREATE (coromoto: Mujer {nombre: "Coromoto Sotillo",edad: 35,actividad: "Profesor",gusto1: "Peliculas",gusto2: "Naturaleza",disgusto: "Futbol"})
+CREATE (coromoto: Mujer {nombre: "Coromoto Sotillo",edad: 66,actividad: "Profesor",gusto1: "Peliculas",gusto2: "Naturaleza",disgusto: "Futbol"})
 
-CREATE (edwar: Hombre {nombre: "Edwar Perez",edad: 40,actividad: "Profesor",gusto1: "Leer",gusto2: "Viajar",disgusto: "Moda"})
+CREATE (edwar: Hombre {nombre: "Edwar Perez",edad: 32,actividad: "Profesor",gusto1: "Leer",gusto2: "Viajar",disgusto: "Moda"})
 
-CREATE (sabala: Hombre {nombre: "Sabala pagola",edad: 25,actividad: "Ingeniero",gusto1: "Musica",gusto2: "Peliculas",disgusto: "Beisbol"})
+CREATE (sabala: Hombre {nombre: "Sabala pagola",edad: 56,actividad: "Ingeniero",gusto1: "Musica",gusto2: "Peliculas",disgusto: "Beisbol"})
 
 CREATE (ana: Mujer {nombre: "Ana Castillo",edad: 50,actividad: "Abogado",gusto1: "Animales",gusto2: "Naturaleza",disgusto: "Tecnologias"})
 
-CREATE (luis: Hombre { nombre: "Luis Sotillo",edad: 29,actividad: "Ingeniero",gusto1: "Viajar",gusto2: "Musica",disgusto: "Futbol"})
+CREATE (luis: Hombre { nombre: "Luis Sotillo",edad: 63,actividad: "Ingeniero",gusto1: "Viajar",gusto2: "Musica",disgusto: "Futbol"})
 
-CREATE (beatriz: Mujer {nombre: "Beatriz Rodriguez",edad: 36,actividad: "Ingeniero",gusto1: "Peliculas",gusto2: "Naturaleza",disgusto: "Tecnologias"})
+CREATE (beatriz: Mujer {nombre: "Beatriz Rodriguez",edad:66,actividad: "Ingeniero",gusto1: "Peliculas",gusto2: "Naturaleza",disgusto: "Tecnologias"})
 
 CREATE (isidora2: Mujer {nombre: "Isidora Sotillo",edad: 41,actividad: "Profesor",gusto1: "Leer",gusto2: "Viajar",disgusto: "Moda"})
 
-CREATE (luis2: Hombre {nombre: "Luis Salazar",edad: 26,actividad: "Estudiante",gusto1: "Musica",gusto2: "Deportes",disgusto: "Futbol"})
+CREATE (luis2: Hombre {nombre: "Luis Salazar",edad: 67,actividad: "Estudiante",gusto1: "Musica",gusto2: "Deportes",disgusto: "Futbol"})
 
 CREATE (yuleima: Mujer {nombre: "Yuleima Sotillo",edad: 51,actividad: "Abogada",gusto1: "Animales",gusto2: "Naturaleza",disgusto: "Tecnologias"})
 
-CREATE (wilfredo: Hombre {nombre: "Wilfredo Coa",edad: 33,actividad: "Ingeniero",gusto1: "Tecnologias",gusto2: "Autos",disgusto: "Gatos"})
+CREATE (wilfredo: Hombre {nombre: "Wilfredo Coa",edad: 60,actividad: "Ingeniero",gusto1: "Tecnologias",gusto2: "Autos",disgusto: "Gatos"})
 
-CREATE (genesis: Mujer {nombre: "Genesis Coa",edad: 46,actividad: "Medico",gusto1: "Naturaleza",gusto2: "Leer",disgusto: "Futbol"})
+CREATE (genesis: Mujer {nombre: "Genesis Coa",edad: 36,actividad: "Medico",gusto1: "Naturaleza",gusto2: "Leer",disgusto: "Futbol"})
 
 CREATE (leo: Hombre {nombre: "Leo Fernandez",edad: 39,actividad: "Profesor",gusto1: "Leer",gusto2: "Viajar",disgusto: "Moda"})
 
-CREATE (yeruzca: Mujer {nombre: "Yeruzca Sanchez",edad: 28,actividad: "Veterinario", gusto1: "Animales", gusto2: "Naturaleza", disgusto: "Tecnologias"})
+CREATE (yeruzca: Mujer {nombre: "Yeruzca Sanchez",edad: 41,actividad: "Veterinario", gusto1: "Animales", gusto2: "Naturaleza", disgusto: "Tecnologias"})
 
 CREATE (jesus2: Hombre {nombre: "Jesus Moreno",edad: 43,actividad: "Psicologo",gusto1: "Peliculas",gusto2: "Musica", disgusto: "Futbol"})
 
 //Relaciones
 
-MATCH (liris: Mujer {nombre: "Liris Sotillo"}), (yeruzca: Mujer {nombre: "Yeruzca Sanchez"})
-CREATE (liris)-[:AMIGO_DE {fecha_ini: datetime()}]->(yeruzca)
+MATCH (ednoweri: Mujer {nombre: "Ednoweri Anselmi"}), (persona:Hombre {nombre: "Jeinder Abanero"})
+CREATE (ednoweri)-[:AMIGO_DE {fecha_ini: datetime()}]->(persona)
 
 MATCH (ivan: Hombre {nombre: "Ivan Anselmi"}), (jesus2: Hombre {nombre: "Jesus Moreno"})
 CREATE (ivan)-[:AMIGO_DE{fecha_ini: datetime()}]->(jesus2)
@@ -186,5 +186,32 @@ MATCH (yeruzca: Mujer {nombre: "Yeruzca Sanchez"}), (jesus2: Hombre {nombre: "Je
 CREATE (yeruzca)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(jesus2),
        (jesus2)-[:CASADO_CON {fecha_ini: datetime(), fecha_fin: null}]->(yeruzca)
 
+// primo
+
+MATCH (ednoweri: Mujer {nombre: "Ednoweri Anselmi"}), (genesis: Mujer {nombre: "Genesis Coa"})
+CREATE (ednoweri)-[:PRIMO_DE]->(genesis)
+
+MATCH (ednoweri: Mujer {nombre: "Ednoweri Anselmi"}), (genesis: Mujer {nombre: "Genesis Coa"})
+CREATE (genesis)-[:PRIMO_DE]->(ednoweri)
 
 
+//Tio
+
+MATCH (lisset: Mujer {nombre: "Lisset Sotillo"}), (ednoweri: Mujer {nombre: "Ednoweri Anselmi"})
+CREATE (lisset)-[:TIO_DE]->(ednoweri)
+
+MATCH (coromoto: Mujer {nombre: "Coromoto Sotillo"}), (ednoweri: Mujer {nombre: "Ednoweri Anselmi"})
+CREATE (coromoto)-[:TIO_DE]->(ednoweri)
+
+MATCH (luis: Hombre { nombre: "Luis Sotillo"}), (ednoweri: Mujer {nombre: "Ednoweri Anselmi"})
+CREATE (luis)-[:TIO_DE]->(ednoweri)
+
+
+MATCH (beatriz: Mujer {nombre: "Beatriz Rodriguez"}), (ednoweri: Mujer {nombre: "Ednoweri Anselmi"})
+CREATE (beatriz)-[:TIO_DE]->(ednoweri)
+
+MATCH (luis: Hombre { nombre: "Luis Sotillo"}), (ednoweri: Mujer {nombre: "Ednoweri Anselmi"})
+CREATE (luis)-[:TIO_DE]->(ednoweri)
+
+MATCH (yuleima: Mujer {nombre: "Yuleima Sotillo"}), (ednoweri: Mujer {nombre: "Ednoweri Anselmi"})
+CREATE (yuleima)-[:PRIMO_DE]->(ednoweri)

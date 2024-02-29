@@ -1,0 +1,48 @@
+// Q: Parientes que alumnoA podría presentarle a alumnoB según gustos
+
+MATCH (ednoweri), (jeinder)
+WHERE (ednoweri)-[:PADRE_DE]->() AND (jeinder)-[:PADRE_DE]->()
+WITH COLLECT(DISTINCT ednoweri) AS padresA, COLLECT(DISTINCT jeinder) AS padresB
+UNWIND padresA AS padreA
+UNWIND padresB AS padreB
+MATCH (padreA)-[:PADRE_DE]->(hijoA), (padreB)-[:PADRE_DE]->(hijoB)
+WHERE (hijoA)-[:PADRE_DE]->() AND (hijoB)-[:PADRE_DE]->()
+AND (padreA: Hombre OR padreA: Mujer) AND (padreB: Hombre OR padreB: Mujer)
+WITH padreA, padreB, COLLECT(DISTINCT hijoA.nombre) AS hijosA, COLLECT(DISTINCT hijoB.nombre) AS hijosB
+RETURN padreA.nombre AS Padre_A, padreB.nombre AS Padre_B, hijosA AS Hijos_Alumno_A, hijosB AS Hijos_Alumno_B
+
+// Q: Todas las personas que sean estudiantes
+
+MATCH (persona)
+WHERE (persona:Hombre OR persona:Mujer)
+AND persona.actividad = "Estudiante"
+SET persona:Estudiante
+RETURN persona;
+
+// Q: Persona a menos saltos que comparta algún gusto con el padre de alumnoA
+
+MATCH (ednoweri:Mujer {nombre: "Ednoweri Anselmi"})-[PADRE_DE]->(padre)-[AMIGO_DE*1..2]->(persona)
+WHERE persona.gusto1 IN padre.gusto1 OR persona.gusto2 IN padre.gusto2
+RETURN persona;
+
+// Q: Persona a mayor distancia de ednoweri que comparta algún gusto, pero no le disguste algo de ednoweri
+
+MATCH (ednoweri:Mujer {nombre: "Ednoweri Anselmi"})-[AMIGO_DE*..]->(persona)
+WHERE NOT (persona)-[:AMIGO_DE]->(:Persona) AND
+      (persona.gusto1 IN ednoweri.gusto1 OR persona.gusto2 IN ednoweri.gusto2) AND
+      NOT (persona.disgusto IN ednoweri.gusto1 OR persona.disgusto IN ednoweri.gusto2)
+RETURN persona;
+
+// Q: Primos que poseen – los amigos de ednoweri
+
+MATCH (ednoweri:Persona {nombre: "Ednoweri Anselmi"})-[:AMIGO_DE]->(amigo)-[:PRIMO_DE]->(primo)-[:AMIGO_DE]->(amigo_primo)
+RETURN primo;
+
+
+
+
+// Q: Tíos masculinos de un amigo que le disgusten los gatos y sean veterinarios.
+
+MATCH (ednoweri:Mujer{nombre: "Ednoweri Anselmi"})-[AMIGO_DE]->(amigo)-[PADRE_DE]->(tio)
+WHERE tio.disgusto = "Gatos" AND tio.actividad = "Veterinario"
+RETURN tio;
