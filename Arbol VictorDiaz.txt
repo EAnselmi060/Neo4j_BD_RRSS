@@ -1,0 +1,353 @@
+CREATE (:Hombre {
+    nombre: 'Marcos Campero',
+    edad: 82,
+    actividad: 'Veterinario',
+    gusto1: 'Naturaleza',
+    gusto2: 'Musica',
+    disgusto: 'Viajar',
+    defuncion: '5-12-2018'  
+})
+
+CREATE (:Mujer {
+    nombre: 'Petra Arteaga',
+    edad: 92,
+    actividad: 'Otros',
+    gusto1: 'Naturaleza',
+    gusto2: 'Peliculas',
+    disgusto: 'Moda'  
+})
+
+CREATE (:Mujer {
+    nombre: 'Ivon Arteaga',
+    edad: 61,
+    actividad: 'Otros',
+    gusto1: 'Moda',
+    gusto2: 'Leer',
+    disgusto: 'Motos'  
+})
+
+CREATE (:Mujer {
+    nombre: 'Isbely Arteaga',
+    edad: 42,
+    actividad: 'Otros',
+    gusto1: 'Moda',
+    gusto2: 'Peliculas',
+    disgusto: 'Motos'  
+})
+
+CREATE (:Hombre {
+    nombre: 'Leo Arteaga',
+    edad: 40,
+    actividad: 'Otros',
+    gusto1: 'Autos',
+    gusto2: 'Futbol',
+    disgusto: 'Leer'
+})
+
+CREATE (:Hombre {
+    nombre: 'Jhonathan Arteaga',
+    edad: 52,
+    actividad: 'Otros',
+    gusto1: 'Autos',
+    gusto2: 'Motos',
+    disgusto: 'Naturaleza'
+})
+
+CREATE (:Hombre {
+    nombre: 'Elias Tovar',
+    edad: 54,
+    actividad: 'Otros',
+    gusto1: 'Autos',
+    gusto2: 'Futbol',
+    disgusto: 'Gatos',
+    defuncion: '14-3-1998'
+})
+
+CREATE (:Mujer {
+    nombre: 'Petra Arteaga',
+    edad: 55,
+    actividad: 'Otros',
+    gusto1: 'Perros',
+    gusto2: 'Peliculas',
+    disgusto: 'Futbol'  
+})
+
+CREATE (:Hombre {
+    nombre: 'Victor Manuel',
+    edad: 58,
+    actividad: 'Otros',
+    gusto1: 'Autos',
+    gusto2: 'Beisbol',
+    disgusto: 'Gatos',
+    defuncion: '1-1-2012'
+})
+
+CREATE (:Hombre {
+    nombre: 'Jose Arteaga',
+    edad: 64,
+    actividad: 'Veterinario',
+    gusto1: 'Autos',
+    gusto2: 'Naturaleza',
+    disgusto: 'Gatos'
+})
+
+CREATE (:Mujer {
+    nombre: 'Yusmary',
+    edad: 55,
+    actividad: 'Otros',
+    gusto1: 'Perros',
+    gusto2: 'Viajar',
+    disgusto: 'Autos'  
+})
+
+CREATE (:Hombre {
+    nombre: 'Catalino Arteaga',
+    edad: 68,
+    actividad: 'Veterinario',
+    gusto1: 'Autos',
+    gusto2: 'Motos',
+    disgusto: 'Musica'
+})
+
+CREATE (:Hombre {
+    nombre: 'Filiberto Arteaga',
+    edad: 70,
+    actividad: 'Otros',
+    gusto1: 'Autos',
+    gusto2: 'Beisbol',
+    disgusto: 'Volibol'
+})
+
+CREATE (:Hombre {
+    nombre: 'Marcos Tovar',
+    edad: 34,
+    actividad: 'Estudiante',
+    gusto1: 'Autos',
+    gusto2: 'Musica',
+    disgusto: 'Gatos'
+})
+
+CREATE (:Mujer {
+    nombre: 'Egary Tovar',
+    edad: 30,
+    actividad: 'Otros',
+    gusto1: 'Moda',
+    gusto2: 'Viajar',
+    disgusto: 'Autos'  
+})
+
+CREATE (:Hombre {
+    nombre: 'Makey Parra',
+    edad: 40,
+    actividad: 'Otros',
+    gusto1: 'Motos',
+    gusto2: 'Beisbol',
+    disgusto: 'Gatos'
+})
+
+CREATE (:Hombre {
+    nombre: 'Victor Diaz',
+    edad: 24,
+    actividad: 'Estudiante',
+    gusto1: 'Tecnologias',
+    gusto2: 'Perros',
+    disgusto: 'Gatos'
+})
+
+CREATE (:Hombre {
+    nombre: 'Arturo Arteaga',
+    edad: 30,
+    actividad: 'Otros',
+    gusto1: 'Autos',
+    gusto2: 'Motos',
+    disgusto: 'Tecnologias'
+})
+
+CREATE (:Mujer {
+    nombre: 'Yinneth Arteaga',
+    edad: 32,
+    actividad: 'Otros',
+    gusto1: 'Moda',
+    gusto2: 'Musica',
+    disgusto: 'Leer'  
+})
+
+CREATE (:Mujer {
+    nombre: 'Norkis Mendoza',
+    edad: 30,
+    actividad: 'Otros',
+    gusto1: 'Moda',
+    gusto2: 'Leer',
+    disgusto: 'Futbol'  
+})
+
+CREATE (:Hombre {
+    nombre: 'Alexander Arteaga',
+    edad: 50,
+    actividad: 'Ingeniero',
+    gusto1: 'Tecnologias',
+    gusto2: 'Autos',
+    disgusto: 'Motos'
+})
+
+CREATE (:Mujer {
+    nombre: 'Marycarmen Sulbaran',
+    edad: 48,
+    actividad: 'Otros',
+    gusto1: 'Moda',
+    gusto2: 'Gatos',
+    disgusto: 'Leer'  
+})
+
+CREATE (:Mujer {
+    nombre: 'Emma Sophia',
+    edad: 0,
+    actividad: 'Otros',
+    gusto1: 'Musica',
+    gusto2: 'Naturaleza',
+    disgusto: 'Motos'  
+})
+
+CREATE (:Mujer {
+    nombre: 'Raxelys Rodriguez',
+    edad: 25,
+    actividad: 'Estudiante',
+    gusto1: 'Tecnologias',
+    gusto2: 'Viajar',
+    disgusto: 'Futbol'  
+})
+
+CREATE (:Hombre {
+    nombre: 'Joseph Arteaga',
+    edad: 23,
+    actividad: 'Estudiante',
+    gusto1: 'Tecnologias',
+    gusto2: 'Autos',
+    disgusto: 'Leer'
+})
+
+CREATE (:Hombre {
+    nombre: 'Jhonder Arteaga',
+    edad: 22,
+    actividad: 'Estudiante',
+    gusto1: 'Motos',
+    gusto2: 'Autos',
+    disgusto: 'Leer'
+})
+
+CREATE (:Mujer {
+    nombre: 'Katerine Arteaga',
+    edad: 25,
+    actividad: 'Estudiante',
+    gusto1: 'Moda',
+    gusto2: 'Musica',
+    disgusto: 'Leer'  
+})
+
+MATCH (marcos:Hombre {nombre: 'Marcos Campero'})
+MATCH (petra:Mujer {nombre: 'Petra Arteaga', edad: 92})
+CREATE (marcos)-[:CASADO_CON {fecha_ini: date('1920-12-12'), fecha_fin: date('1938-12-12')}]->(petra),
+(petra)-[:CASADO_CON {fecha_ini: date('1920-12-10'), fecha_fin: date('1938-12-12')}]->(marcos)
+
+MATCH (padre:Hombre {nombre: 'Marcos Campero'})
+MATCH (hijo) WHERE hijo.nombre IN ['Jose Arteaga', 'Filiberto Arteaga', 'Catalino Arteaga', 'Ivon Arteaga']
+CREATE (padre)-[:PADRE_DE {fecha_ini: date() - duration({years: hijo.edad})}]->(hijo)
+
+
+//RELACIONES
+
+MATCH (amigo:Hombre {nombre: 'Victor Diaz'})
+MATCH (amiga:Mujer {nombre: 'Raxelys Rodriguez'})
+merge (amigo)-[:AMIGO_DE {fecha_ini: date('2014-12-12')}]->(amiga)
+merge (amiga)-[:AMIGO_DE {fecha_ini: date('2014-12-12')}]->(amigo)
+
+MATCH (padre:Hombre {nombre: 'Alexander Arteaga'})
+MATCH (madre:Mujer {nombre: 'Marycarmen Sulbaran'})
+Create (padre)-[:CASADO_CON {fecha_ini: date('2000-12-12'), fecha_fin: date('2016-12-12')}]->(madre),
+(madre)-[:CASADO_CON {fecha_ini: date('2000-12-12'), fecha_fin: date('2016-12-12')}]->(padre)
+
+MATCH (padre:Hombre {nombre: 'Makey Parra'})
+MATCH (madre:Mujer {nombre: 'Egary Tovar'})
+merge (padre)-[:CASADO_CON {fecha_ini: date('2019-12-12')}]->(madre)
+merge (madre)-[:CASADO_CON {fecha_ini: date('2019-12-12')}]->(padre)
+
+MATCH (padre:Hombre {nombre: 'Marcos Tovar'})
+MATCH (madre:Mujer {nombre: 'Norkis Mendoza'})
+merge (padre)-[:CASADO_CON {fecha_ini: date('2018-12-12')}]->(madre)
+merge (madre)-[:CASADO_CON {fecha_ini: date('2018-12-12')}]->(padre)
+
+MATCH (padre:Hombre {nombre: 'Jose Arteaga'})
+MATCH (madre:Mujer {nombre: 'Yusmary'})
+merge (padre)-[:CASADO_CON {fecha_ini: date('1992-12-12')}]->(madre)
+merge (madre)-[:CASADO_CON {fecha_ini: date('1992-12-12')}]->(padre)
+
+MATCH (padre:Hombre {nombre: 'Victor Manuel'})
+MATCH (madre:Mujer {nombre: 'Petra Arteaga', edad: 55})
+merge (padre)-[:CASADO_CON {fecha_ini: date('1998-12-12'), fecha_fin: date('2000-12-12')}]->(madre)
+merge (madre)-[:CASADO_CON {fecha_ini: date('1998-12-12'), fecha_fin: date('2000-12-12')}]->(padre)
+
+MATCH (padre:Hombre {nombre: 'Elias Tovar'})
+MATCH (madre:Mujer {nombre: 'Petra Arteaga', edad: 55})
+merge (padre)-[:CASADO_CON {fecha_ini: date('1980-12-12'), fecha_fin: date('1995-12-12')}]->(madre)
+merge (madre)-[:CASADO_CON {fecha_ini: date('1980-12-12'), fecha_fin: date('1995-12-12')}]->(padre)
+
+MATCH (padre) WHERE padre.nombre IN ['Catalino Arteaga']
+MATCH (hijo) Where hijo.nombre IN ['Alexander Arteaga']
+CREATE (padre)-[:PADRE_DE {fecha_ini: date() - duration({years: hijo.edad})}]->(hijo)
+
+MATCH (padre:Mujer {nombre: 'Petra Arteaga', edad: 55})
+MATCH (hijo) WHERE hijo.nombre IN ['Victor Diaz', 'Marcos Tovar', 'Egary Tovar']
+CREATE (padre)-[:PADRE_DE {fecha_ini: date() - duration({years: hijo.edad})}]->(hijo)
+
+MATCH (padre) WHERE padre.nombre IN ['Victor Manuel']
+MATCH (hijo) Where hijo.nombre IN ['Victor Diaz']
+CREATE (padre)-[:PADRE_DE {fecha_ini: date() - duration({years: hijo.edad})}]->(hijo)
+
+MATCH (padre:Hombre {nombre: 'Elias Tovar'}) 
+MATCH (hijo) Where hijo.nombre IN ['Marcos Tovar', 'Egary Tovar']
+CREATE (padre)-[:PADRE_DE {fecha_ini: date() - duration({years: hijo.edad})}]->(hijo)
+
+MATCH (padre) WHERE padre.nombre IN ['Jose Arteaga', 'Yusmary']
+MATCH (hijo) Where hijo.nombre IN ['Arturo Arteaga', 'Yinneth Arteaga']
+CREATE (padre)-[:PADRE_DE {fecha_ini: date() - duration({years: hijo.edad})}]->(hijo)
+
+MATCH (padre) WHERE padre.nombre IN ['Egary Tovar', 'Makey Parra']
+MATCH (hijo:Mujer {nombre: 'Emma Sophia'}) 
+CREATE (padre)-[:PADRE_DE {fecha_ini: date() - duration({years: hijo.edad})}]->(hijo)
+
+MATCH (padre:Mujer {nombre: 'Marycarmen Sulbaran'})
+MATCH (hijo) WHERE hijo.nombre IN ['Joseph Arteaga', 'Jhonder Arteaga', 'Katerine Arteaga']
+CREATE (padre)-[:PADRE_DE {fecha_ini: date() - duration({years: hijo.edad})}]->(hijo)
+
+MATCH (padre:Hombre {nombre: 'Alexander Arteaga'})
+MATCH (hijo) WHERE hijo.nombre IN ['Joseph Arteaga', 'Jhonder Arteaga', 'Katerine Arteaga']
+CREATE (padre)-[:PADRE_DE {fecha_ini: date() - duration({years: hijo.edad})}]->(hijo)
+
+MATCH (padre:Mujer {nombre: 'Ivon Arteaga'})
+MATCH (hijo) WHERE hijo.nombre IN ['Leo Arteaga', 'Isbely Arteaga', 'Jhonathan Arteaga']
+Merge (padre)-[:PADRE_DE {fecha_ini: date() - duration({years: hijo.edad})}]->(hijo)
+
+MATCH (padre:Mujer {nombre: 'Petra Arteaga', edad: 92})
+MATCH (hijo:Mujer{nombre: 'Petra Arteaga', edad: 55} ) 
+CREATE (padre)-[:PADRE_DE {fecha_ini: date() - duration({years: hijo.edad})}]->(hijo)
+
+MATCH (padre:Hombre {nombre: 'Marcos Campero'})
+MATCH (petra:Mujer {nombre: 'Petra Arteaga', edad: 55})
+CREATE (padre)-[:PADRE_DE {fecha_ini: date() - duration({years: petra.edad})}]->(petra)
+
+MATCH (padre:Hombre {nombre: 'Marcos Campero'})
+MATCH (hijo) WHERE hijo.nombre IN ['Jose Arteaga', 'Filiberto Arteaga', 'Catalino Arteaga', 'Ivon Arteaga']
+CREATE (padre)-[:PADRE_DE {fecha_ini: date() - duration({years: hijo.edad})}]->(hijo)
+
+MATCH (marcos:Hombre {nombre: 'Marcos Campero'})
+MATCH (petra:Mujer {nombre: 'Petra Arteaga', edad: 92})
+CREATE (marcos)-[:CASADO_CON {fecha_ini: date('1920-12-12'), fecha_fin: date('1938-12-12')}]->(petra),
+(petra)-[:CASADO_CON {fecha_ini: date('1920-12-10'), fecha_fin: date('1938-12-12')}]->(marcos)
+
+
+
+
+
+
+
+

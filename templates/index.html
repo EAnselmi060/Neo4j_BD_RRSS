@@ -3,21 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta Neo4j</title>
+    <title>Hombres Y mujeres</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <h1>Nodos Hombres:</h1>
-    <ul>
-        {% for hombre in hombres %}
-        <li>{{ hombre }}</li>
-        {% endfor %}
-    </ul>
+    <div class="container-fluid md-1 m-1"> <!-- Envuelve todo el contenido para centralizarlo y agregar márgenes laterales -->
 
-    <h1>Nodos Mujeres:</h1>
-    <ul>
-        {% for mujer in mujeres %}
-        <li>{{ mujer }}</li>
-        {% endfor %}
-    </ul>
+        <h1 class="text-center m-4">Hombres</h1>
+        <div class="row">
+            {% for hombre in hombres %}
+                <div class="col-md-2 mb-3"> <!-- Dividimos en columnas y añadimos margen inferior -->
+                    <div class="card">
+                        <div class="card-header">
+                            <b>{{ hombre['h'].nombre }}</b>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Edad: {{ hombre['h'].edad }}</p>
+                            <p class="card-text">Actividad: {{ hombre['h'].actividad }}</p>
+                            <p class="card-text">Gusto 1 : {{ hombre['h'].gusto1 }}</p>
+                            <p class="card-text">Gusto 2 : {{ hombre['h'].gusto2 }}</p>
+                            <p class="card-text">Disgusto : {{ hombre['h'].disgusto }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+        <h1 class="text-center m-4">Mujeres</h1>
+        <div class="row">
+            {% for mujer in mujeres %}
+                <div class="col-md-2 mb-3"> <!-- Dividimos en columnas y añadimos margen inferior -->
+                    <div class="card">
+                        <div class="card-header">
+                            <b>{{ mujer['m'].nombre }}</b>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text">Edad: {{ mujer['m'].edad }}</p>
+                            <p class="card-text">Actividad: {{ mujer['m'].actividad }}</p>
+                            <p class="card-text">Gusto 1 : {{ mujer['m'].gusto1 }}</p>
+                            <p class="card-text">Gusto 2 : {{ mujer['m'].gusto2 }}</p>
+                            <p class="card-text">Disgusto : {{ mujer['m'].disgusto }}</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+
+    </div> <!-- Cierre del contenedor -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
+
