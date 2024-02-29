@@ -52,6 +52,20 @@ def buscar():
 
     return render_template('resultados_busqueda.html', personas=resultados, query=query)
 
+@app.route('/cypher')
+def cypher():
+    query = request.args.get('query')  # Obtener la consulta del formulario de búsqueda
+    
+    # Verificar si se proporciona una consulta en la URL
+    if query:
+        # Ejecutar la consulta Cypher y obtener los resultados
+        resultados = execute_query(query)
+    else:
+        # Si no se proporciona una consulta, establecer resultados como una lista vacía
+        resultados = []
+
+    # Renderizar la plantilla HTML y pasar los resultados y la consulta
+    return render_template('cypher.html', query=query, personas=resultados)
 
 if __name__ == '__main__':
     app.run(debug=True)
